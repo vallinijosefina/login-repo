@@ -1,6 +1,6 @@
-# Web de Nombre y apellido
+# Web de Josefina Vallini
 
-Este proyecto es una web de tipo...
+Este proyecto es una web de tipo porfolio
 
 ## Comandos principales
 
