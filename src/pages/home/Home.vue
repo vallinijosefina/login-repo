@@ -10,23 +10,23 @@ const menuItems = [
     },
     {
         label: 'Sobre mi',
-        href: '#Sobre mi',
-        onClick: () => scrollToSection('#Sobre mi')
+        href: '#Sobre-mi',
+        onClick: () => scrollToSection('#Sobre-mi')
     },
     {
         label: 'Profesional',
-        href: '#Información profesional',
-        onClick: () => scrollToSection('#Información profesional')
+        href: '#Información-profesional',
+        onClick: () => scrollToSection('#Información-profesional')
     },
     {
         label: 'Trabajos',
-        href: '#videre',
-        onClick: () => scrollToSection('#videre')
+        href: '#Trabajos',
+        onClick: () => scrollToSection('#Trabajos')
     },
     {
         label: 'Contacto',
-        href: '#contactus',
-        onClick: () => scrollToSection('#contactus')
+        href: '#Contacto',
+        onClick: () => scrollToSection('#Contacto')
     }
 ]
 </script>
@@ -34,38 +34,52 @@ const menuItems = [
 
 
 <template>
- <NavigatorPrimarius :items="menuItems" home-route="/" />
-    <header class="titulus">
-        <h1 class="text-black">Josefina Vallini</h1>
+    <header class="mi-nombre flex items-center justify-between px-6 py-4">
+        <h1 class="text-black text-xl">
+            Josefina Vallini
+        </h1>
+         <NavigatorPrimarius 
+            :items="menuItems" 
+            home-route="/"/>
     </header>
 
     <section class="Inicio">
-        <img scr="/imagines/Presentacion.jpg"/>
+        <img src="/imagines/Presentacion.png"/>
     </section>
 
-    <section id= "Sobre mi">
-        <div>
+    <section id= "Sobre-mi">
+         <img src="/imagines/FOTOPERFIL.png">
+        <div class="descripcion">
             <h1>Sobre mi</h1>
+            <p>Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia</p>
         </div>
-        
+       
     </section>
 
-    <section id="Información profesional">
+    <section id="Información-profesional">
          <div>
-            <h1>Inofrmación Profesional</h1>
+            <h1>Información Profesional</h1>
+            <p>Actualmente estoy en segundo año de la carrera Diseño y Tecnologías Creativas</p>
+            <p>Poseo conocimientos en varios programas de Adobe, tales son Photoshop, Ilustrator, Indesign, Premiere</p>
         </div>
     </section>
 
     <section id="Trabajos">
-         <div>
+        <div>
             <h1>Trabajos</h1>
         </div>
-        <!-- <RouterLink/> -->
+        <!-- <RouterLink/> y carrulus?? -->
     </section>
 
     <section id="Contacto">
          <div>
             <h1>Contacto</h1>
+            <p>@joseevallini
+                618803643
+                vallini.josefina@gmail.com
+                be.net/JosefinaVallini
+            </p>
+        <!-- Formulario, logos instagram y eso  -->
         </div>
     </section>
 
@@ -75,32 +89,29 @@ const menuItems = [
 
 
 <style scoped>
-.icon-home{
-    color: slateblue;
-    width: 3rem;
-    height: 3rem;
-}
-.icon-home:hover{
-    color: rgb(59,41,70);
-    background-color: slateblue;
-}
-.extra-nav {
-  background-color: rgb(59,41,70);
-  opacity: 0.7;
-  box-shadow: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  width: 11rem;
-  border-radius: 0 0 1rem 0;
-  z-index: 1;
-}
 
-@media (min-width: 640px) {
-    .extra-nav {
-    width: 100%;
-    border-radius: 0;
-    opacity: 1;
-    left: 0;
+#Sobre-mi{
+  
+    display: flex;
+    align-items: center;   /* centra verticalmente */
+    justify-content: space-between;
+    gap: 2rem;       /* espacio entre texto e imagen */
+}
+#Sobre-mi img {
+    width: 200px;          /* tamaño de la imagen */
+    height: auto;
+}
+.descripcion{
+    margin: 50px;
+}
+@media (max-width: 600px) {
+    #Sobre-mi {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #Sobre-mi img {
+        width: 150px;
     }
 }
 </style>

@@ -50,13 +50,15 @@ onUnmounted(() => {
 
 <template>
 <div>
-     <nav v-if="videreMenu" class="extra-nav flex flex-col sm:flex-row justify-between px-3"> 
-            <RouterLink to="homeRoute">
+    <Toggle 
+          class="fixed top-4 right-4  block sm:hidden"
+          @click="videreMenu= !videreMenu"
+          >
             <Menu />
-            </RouterLink>
-
+          </Toggle>
+     <nav v-if="videreMenu" class="flex flex-col sm:flex-row justify-between px-3 md:block"> 
             <NavigationMenu>
-                <NavigationMenuList class="flex flex-col sm:flex-row ">
+                <NavigationMenuList class="flex flex-col sm:flex-row">
                     <NavigationMenuItem v-for="item in items" :key="item.label">
                         <a 
                         :href="item.href" 
@@ -81,9 +83,19 @@ onUnmounted(() => {
     width: 2rem;
     height: 2rem;
 }
+
 .icon-menu:hover{
     color: red;
     background:aqua;
+}
+@media (min-width: 640px) {
+   .icon-menu {
+    width: 100%;
+    border-radius: 0;
+    opacity: 1;
+    left: 0;
+   
+    }
 }
 .barra-superior {
   background-color: rgb(0, 0, 0);
