@@ -4,7 +4,7 @@ import { scrollToSection } from '@/utils/ScrolltoSection'
 
 import { ref } from 'vue';
 import { Card,CardContent } from '@/components/ui/card';
-import { trabajos, type Trabajos } from '@/TrabajosHechos/data';
+import { trabajos, type Trabajos } from '@/pages/TrabajosHechos/data';
 const listaTrabajos = ref< Trabajos[]>( trabajos )
 
 const menuItems = [
@@ -39,11 +39,15 @@ const menuItems = [
 
 
 <template>
-    <header class="mi-nombre flex items-center justify-between px-6 py-4">
-        <h1 class="text-black text-xl ">
+    <header class="mi-nombre flex items-center justify-between ">
+        <!-- <h1 class="text-black text-xl ">
             Josefina Vallini
-        </h1>
+        </h1> -->
+        <img 
+            class="w-35 px-6 m-2 hover:scale-250 ease-in-out"
+            src="/imagines/minombre.png">
          <NavigatorPrimarius 
+            class="px-6 py-4"
             :items="menuItems" 
             home-route="/"/>
     </header>
@@ -73,19 +77,22 @@ const menuItems = [
 
     <section id="Trabajos">
         <div class="m-10">
-            <h1>Trabajos</h1>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
+            <h1 >TRABAJOS</h1>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6">
                 <Card 
-                    class="cursor-pointer w-70 h-70  "
-                    v-for="trabajos in listaTrabajos"
+                    class=" cursor-pointer object-contain h-full w-auto bg-[#121085] rounded"
+                    v-for="mitrabajo in listaTrabajos"
                     >
-                <CardContent class="flex flex-col items-center justify-around w-60 h-60 ">
-                    <h2 class="Caps">{{ trabajos.titulus }}</h2>
-                    <img 
-                        class=" object-cover object-top "
-                        :src="`/imagines/Trabajos/${ trabajos.imago }`" alt=""
-                    >
-                </CardContent>
+                    <CardContent 
+                        class="object-contain h-full w-auto flex flex-col items-center justify-around mt-4 "
+                        @click="$router.push(`/trabajo/${ mitrabajo.id }`)"
+                        >
+                        <h2 class="text-white">{{ mitrabajo.titulus }}</h2>
+                        <img 
+                            class=" rounded w-48 h-48 object-cover object-center mt-2 mb-4  "
+                            :src="`/imagines/Trabajos/${ mitrabajo.imago }`" alt=""
+                        >
+                    </CardContent>
                 </Card>
 
             </div>

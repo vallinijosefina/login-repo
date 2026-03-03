@@ -5,7 +5,7 @@ import { Card, CardContent } from './ui/card';
 
 <template>
     <div>
-        <Card class="cursor-pointer w-[220px] h-[240px]  hover:shadow-*">
+        <Card class="cursor-pointer w-[220px] h-[240px]  hover:shadow-* duration-300 ease-in ">
             <CardContent>
                 <h2 class="Caps">Primer tp</h2>
             </CardContent>

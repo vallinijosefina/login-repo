@@ -1,6 +1,6 @@
 import Home from "@/pages/home/Home.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
-
+import MisTrabajos from "@/pages/TrabajosHechos/MisTrabajos.vue";
 
 
 export const router = createRouter({
@@ -10,11 +10,16 @@ export const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      },
+    {
+      path: '/trabajo/:id', 
+      name: 'trabajo-detalle',
+      component: MisTrabajos,
     },
     {
       path: '/:patchMatch(.*)',
       redirect: '/'
-    }
-  ]
+    },
+  ]          
 })
