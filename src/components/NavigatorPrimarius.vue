@@ -64,7 +64,7 @@ onUnmounted(() => {
                         :href="item.href" 
                         @click.prevent = "item.onClick ? item.onClick() : null"
                         >
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-md hover:bg-[#6A5ACD] hover:text-white ' ]">
+                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'font-family: GeneralReg text-md hover:bg-[#6A5ACD] hover:text-white ' ]">
                                 {{ item.label }}
                             </NavigationMenuLink>
                         </a>
