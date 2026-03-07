@@ -61,7 +61,7 @@ const menuItems = [
     </section>
 
     <section id= "Sobre-mi" 
-            class="flex items-center justify-between gap-2 m-10">
+            class="flex flex-col md:flex-row items-center justify-between gap-2 m-10">
        
         <img 
             class="w-120 rounded object-cover object-center mt-2 mb-4  "
@@ -72,15 +72,14 @@ const menuItems = [
             <p class="parrafo">Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia</p>
        </div>
 
-       <Button 
-       variant="link"
-            @click="$router.push('/Hobbies')"
-            class="p-2 rounded-fulltransition-all "
-        >
-             <img src="/imagines/Presentacion/Boton.png" class="w-10 h-10 object-contain" alt="Icono">
+       <Button variant="link"
+                class="relative p-0 h-auto w-auto transition-all duration-300 animate-sacudida hover:pause-animation">
+            <RouterLink to="/Hobbies">
+             <img src="/imagines/Presentacion/Bt1.png" class=" object-contain" alt="Icono">
             
+            </RouterLink>
+     
         </Button>
-git 
 
     </section>
 
@@ -113,7 +112,7 @@ git
                     v-for="mitrabajo in listaTrabajos"
                     class=" cursor-pointer object-contain h-full w-auto bg-[#191050] rounded"
                     :style="{
-                        backgroundImage: ` url('/imagines/CARDS.png')`,
+                        backgroundImage: ` url('/imagines/Caards.png')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }"
