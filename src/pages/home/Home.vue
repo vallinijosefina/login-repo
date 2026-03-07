@@ -2,12 +2,14 @@
 import NavigatorPrimarius from '@/components/NavigatorPrimarius.vue'
 import { scrollToSection } from '@/utils/ScrolltoSection'
 
+import Button from '@/components/ui/button/Button.vue';
+
 import { ref } from 'vue';
 import { Card,CardContent } from '@/components/ui/card';
 import { trabajos, type Trabajos } from '@/pages/TrabajosHechos/data';
 const listaTrabajos = ref< Trabajos[]>( trabajos )
 
-import CarrusImagium from '@/components/CarrusImagium.vue';
+// import CarrusImagium from '@/components/CarrusImagium.vue';
 
 const menuItems = [
     {
@@ -68,8 +70,18 @@ const menuItems = [
         <div class="descripcion">
             <h1>SOBRE MI</h1>
             <p class="parrafo">Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia</p>
-        </div>
-       
+       </div>
+
+       <Button 
+       variant="link"
+            @click="$router.push('/Hobbies')"
+            class="p-2 rounded-fulltransition-all "
+        >
+             <img src="/imagines/Presentacion/Boton.png" class="w-10 h-10 object-contain" alt="Icono">
+            
+        </Button>
+git 
+
     </section>
 
     <section id="Información-profesional"
@@ -84,11 +96,12 @@ const menuItems = [
             <h1>INFORMACIÓN PROFESIONAL</h1>
             <p class="parrafo">Actualmente estoy en segundo año de la carrera Diseño y Tecnologías Creativas</p>
             <p class="parrafo">Poseo conocimientos en varios programas de Adobe, tales son Photoshop, Ilustrator, Indesign, Premiere</p>
-             <CarrusImagium 
-                :photos="photos"
-                base-path="/imagenes/batman"
-                :auto-play-delay="2000"
-            />
+            <div class="flex flex-row  w-[55px] h-[55px] mt-20 space-x-4" >
+                <img src="/imagines/Presentacion/ill.png" alt="">
+                <img src="/imagines/Presentacion/pho.png" alt=""> 
+                <img src="/imagines/Presentacion/ind.png" alt="">
+                <img src="/imagines/Presentacion/pre.png" alt="">
+            </div>
         </div>
     </section>
 

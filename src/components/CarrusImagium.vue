@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -60,4 +60,4 @@ const props = withDefaults (defineProps<Props>(),{
 </template>
 
 <style scoped></style>
-
+ -->
