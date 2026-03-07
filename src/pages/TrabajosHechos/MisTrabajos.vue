@@ -17,18 +17,26 @@ const mitrabajo =ref<Trabajos | undefined>(
             <h1 class="titulus"> 
                 {{mitrabajo.titulus}}
             </h1>
-        <div class=" grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <img 
-                class="flex   border rounded border-[#12108584]"
+                class="flex shadow"
                 :src="`../imagines/Trabajos/${ mitrabajo.imago }`" 
                 alt="" />
             <img 
-                class="flex border rounded border-[#12108584]"
+                class="flex shadow"
                 :src="`../imagines/Trabajos/${ mitrabajo.imago2 }`" 
                 alt="" />
             <img 
-                class="flex border rounded border-[#12108584]"
+                class="flex shadow"
                 :src="`../imagines/Trabajos/${ mitrabajo.imago3 }`" 
+                alt="" />
+            <img 
+                class="flex shadow"
+                :src="`../imagines/Trabajos/${ mitrabajo.imago4 }`" 
+                alt="" />
+            <img 
+                class="flex shadow"
+                :src="`../imagines/Trabajos/${ mitrabajo.imago5 }`" 
                 alt="" />
         </div>
         
@@ -37,11 +45,17 @@ const mitrabajo =ref<Trabajos | undefined>(
                     {{ mitrabajo.descripcione }}
                 </p>
                         
-                <div class="flex flex-col text-xs ">
-                    <p class="p-2"> 
+                <div class="info-secundaria">
+                    <p class=""> 
                        {{ mitrabajo.date }}
                     </p>
-                    <p class="cursor-pointer border rounded-lg p-2" @click="router.push(`/home`)">
+                    <p class="">
+                        {{ mitrabajo.cliente }}
+                    </p>
+                    <p class="mb-1">
+                        {{ mitrabajo.creditos }}
+                    </p>
+                    <p class="cursor-pointer border rounded-lg p-2" @click="router.push(`/trabajos`)">
                     Volver</p>
                 </div>
             </div>
@@ -89,5 +103,11 @@ const mitrabajo =ref<Trabajos | undefined>(
 
 .figure-quote > img {
   object-fit: contain;
+}
+.info-secundaria p {
+    font-family: 'GeneralSans', sans-serif;
+    color: #191050; 
+    font-size: 0.8rem; /* Esto equivale a text-sm (aprox 14px) */
+   
 }
 </style>

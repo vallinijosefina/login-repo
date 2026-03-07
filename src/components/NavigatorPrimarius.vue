@@ -56,7 +56,7 @@ onUnmounted(() => {
           >
             <Menu />
           </Toggle>
-     <nav v-if="videreMenu" class="flex flex-col sm:flex-row justify-between px-3 md:block"> 
+     <nav v-if="videreMenu" class="flex flex-col sm:flex-row justify-between px-2 sm:block "> 
             <NavigationMenu>
                 <NavigationMenuList class="flex flex-col sm:flex-row">
                     <NavigationMenuItem v-for="item in items" :key="item.label">
@@ -64,7 +64,15 @@ onUnmounted(() => {
                         :href="item.href" 
                         @click.prevent = "item.onClick ? item.onClick() : null"
                         >
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'font-family: GeneralReg text-md hover:bg-[#6A5ACD] hover:text-white ' ]">
+                            <NavigationMenuLink 
+                                :class="[
+                                    navigationMenuTriggerStyle(), 
+                                    'text-md hover:bg-[#21127e] hover:text-white ' 
+                                    
+                                    ]"
+                                    style="font-light"
+                                    
+                                    >
                                 {{ item.label }}
                             </NavigationMenuLink>
                         </a>
@@ -84,10 +92,6 @@ onUnmounted(() => {
     height: 2rem;
 }
 
-.icon-menu:hover{
-    color: red;
-    background:aqua;
-}
 @media (min-width: 640px) {
    .icon-menu {
     width: 100%;
@@ -96,16 +100,6 @@ onUnmounted(() => {
     left: 0;
    
     }
-}
-.barra-superior {
-  background-color: rgb(0, 0, 0);
-  opacity: 0.7;
-  box-shadow: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  border-radius: 0 0 1rem 1rem;
-  z-index: 1;
 }
 
 </style>

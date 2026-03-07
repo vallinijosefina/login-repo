@@ -7,29 +7,31 @@ import { Card,CardContent } from '@/components/ui/card';
 import { trabajos, type Trabajos } from '@/pages/TrabajosHechos/data';
 const listaTrabajos = ref< Trabajos[]>( trabajos )
 
+import CarrusImagium from '@/components/CarrusImagium.vue';
+
 const menuItems = [
     {
-        label: 'Inicio',
+        label: 'INICIO',
         href: '#',
         onClick: () => scrollToSection('#')
     },
     {
-        label: 'Sobre mi',
+        label: 'SOBRE MI',
         href: '#Sobre-mi',
         onClick: () => scrollToSection('#Sobre-mi')
     },
     {
-        label: 'Profesional',
+        label: 'PROFESIONAL',
         href: '#Información-profesional',
         onClick: () => scrollToSection('#Información-profesional')
     },
     {
-        label: 'Trabajos',
+        label: 'TRABAJOS',
         href: '#Trabajos',
         onClick: () => scrollToSection('#Trabajos')
     },
     {
-        label: 'Contacto',
+        label: 'CONTACTO',
         href: '#Contacto',
         onClick: () => scrollToSection('#Contacto')
     }
@@ -47,7 +49,7 @@ const menuItems = [
             class="w-35 px-6 m-2 hover:scale-250 ease-in-out"
             src="/imagines/minombre.png">
          <NavigatorPrimarius 
-            class="px-6 py-4"
+            class="px-6 py-4 "
             :items="menuItems" 
             home-route="/"/>
     </header>
@@ -58,38 +60,58 @@ const menuItems = [
 
     <section id= "Sobre-mi" 
             class="flex items-center justify-between gap-2 m-10">
-
-        <img src="/imagines/FOTOPERFIL.png">
+       
+        <img 
+            class="w-120 rounded object-cover object-center mt-2 mb-4  "
+            src="/imagines/Trabajos/Fotografia/StandStillWarmer.png"
+        >
         <div class="descripcion">
-            <h1>Sobre mi</h1>
+            <h1>SOBRE MI</h1>
             <p class="parrafo">Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia</p>
         </div>
        
     </section>
 
-    <section id="Información-profesional">
+    <section id="Información-profesional"
+            class="relative min-h-[400px] px-10 py-20 text-white"
+            :style="{
+                backgroundImage: `url('/imagines/Presentacion/Fondo.png')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundAttachment: 'fixed' 
+            }">
          <div>
-            <h1>Información Profesional</h1>
+            <h1>INFORMACIÓN PROFESIONAL</h1>
             <p class="parrafo">Actualmente estoy en segundo año de la carrera Diseño y Tecnologías Creativas</p>
             <p class="parrafo">Poseo conocimientos en varios programas de Adobe, tales son Photoshop, Ilustrator, Indesign, Premiere</p>
+             <CarrusImagium 
+                :photos="photos"
+                base-path="/imagenes/batman"
+                :auto-play-delay="2000"
+            />
         </div>
     </section>
 
     <section id="Trabajos">
         <div class="m-10">
             <h1 >TRABAJOS</h1>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6">
+            <div class="grid grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 ">
                 <Card 
-                    class=" cursor-pointer object-contain h-full w-auto bg-[#121085] rounded"
                     v-for="mitrabajo in listaTrabajos"
-                    >
+                    class=" cursor-pointer object-contain h-full w-auto bg-[#191050] rounded"
+                    :style="{
+                        backgroundImage: ` url('/imagines/CARDS.png')`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }"
+                >
                     <CardContent 
-                        class="object-contain h-full w-auto flex flex-col items-center justify-around mt-4 "
+                        class="object-contain h-full w-full flex flex-col items-center justify-around "
                         @click="$router.push(`/trabajo/${ mitrabajo.id }`)"
                         >
-                        <h2 class="text-white">{{ mitrabajo.titulus }}</h2>
+                        <h2 class="text-white mt-4">{{ mitrabajo.titulus }}</h2>
                         <img 
-                            class=" rounded w-48 h-48 object-cover object-center mt-2 mb-4  "
+                            class=" rounded w-[400px] h-[450px] object-cover object-center mt-2 mb-4  "
                             :src="`/imagines/Trabajos/${ mitrabajo.imago }`" alt=""
                         >
                     </CardContent>
@@ -102,7 +124,7 @@ const menuItems = [
 
     <section id="Contacto">
          <div>
-            <h1>Contacto</h1>
+            <h1>CONTACTO</h1>
             <p class="parrafo">@joseevallini
                 618803643
                 vallini.josefina@gmail.com
@@ -124,7 +146,7 @@ const menuItems = [
     height: auto;
 }
 .descripcion{
-    margin: 50px;
+    margin: 40px;
 }
 @media (max-width: 600px) {
     #Sobre-mi {
@@ -135,8 +157,5 @@ const menuItems = [
     #Sobre-mi img {
         width: 150px;
     }
-}
-.parrafo{
-    font-family: GeneralReg; /* ¿¿Cómo agrego la tipografia correctamente??  */
 }
 </style>

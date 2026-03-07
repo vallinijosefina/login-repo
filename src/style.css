@@ -3,44 +3,12 @@
 @import url('general-sans.css');
 
 @custom-variant dark (&:is(.dark *));
-/* 
-@font-face {
-  font-family: 'GeneralReg';
-  src: url('@/assets/fonts/OTF/GeneralSans-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
+@font-face{
+  font-family: "montserrat", sans-serif;
+font-weight: 700;
+font-style: normal;
 }
-
-body{
-  font-family: 'GeneralReg';
-} */
-
-/**
-* @license
-*
-* Font Family: General Sans
-* Designed by: Frode Helland
-* URL: https://www.fontshare.com/fonts/general-sans
-* Â© 2026 Indian Type Foundry
-*
-* General Sans Extralight 
-* General Sans ExtralightItalic 
-* General Sans Light 
-* General Sans LightItalic 
-* General Sans Regular 
-* General Sans Italic 
-* General Sans Medium 
-* General Sans MediumItalic 
-* General Sans Semibold 
-* General Sans SemiboldItalic 
-* General Sans Bold 
-* General Sans BoldItalic 
-* General Sans Variable (Variable font)
-* General Sans VariableItalic (Variable font)
-
-*
-*/
-@font-face {
+/* @font-face {
   font-family: 'GeneralSans-Extralight';
   src: url('../fonts/GeneralSans-Extralight.woff2') format('woff2'),
        url('../fonts/GeneralSans-Extralight.woff') format('woff'),
@@ -148,14 +116,6 @@ body{
   font-display: swap;
   font-style: italic;
 }
-/**
-* This is a variable font
-* You can control variable axes as shown below:
-* font-variation-settings: wght 700.0;
-*
-* available axes:
-'wght' (range from 200.0 to 700.0
-*/
 @font-face {
   font-family: 'GeneralSans-Variable';
   src: url('../fonts/GeneralSans-Variable.woff2') format('woff2'),
@@ -165,14 +125,6 @@ body{
   font-display: swap;
   font-style: normal;
 }
-/**
-* This is a variable font
-* You can control variable axes as shown below:
-* font-variation-settings: wght 700.0;
-*
-* available axes:
-'wght' (range from 200.0 to 700.0
-*/
 @font-face {
   font-family: 'GeneralSans-VariableItalic';
   src: url('../fonts/GeneralSans-VariableItalic.woff2') format('woff2'),
@@ -181,12 +133,7 @@ body{
   font-weight: 200 700;
   font-display: swap;
   font-style: italic;
-}
-
-text{
-  font-family: GeneralSans-Extralight;
-}
-
+} */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -303,3 +250,24 @@ text{
     @apply bg-background text-foreground;
   }
 }
+
+
+p {
+  font-family: 'GeneralSans-Light', sans-serif;
+  color: #191050; 
+  font-size: 18px;
+}  
+
+h1 {
+  font-family: 'GeneralSans-Light', sans-serif;
+  color: #191050; 
+  font-size: 40px;
+  letter-spacing: 0.1rem;
+  padding-bottom: 15px;
+}
+header{
+  font-family: 'GeneralSans-Light', sans-serif;
+  color: #191050; 
+  font-size: 18px;
+}
+
