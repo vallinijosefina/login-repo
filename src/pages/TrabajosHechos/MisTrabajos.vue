@@ -107,7 +107,7 @@ const mitrabajo =ref<Trabajos | undefined>(
 .info-secundaria p {
     font-family: 'GeneralSans', sans-serif;
     color: #191050; 
-    font-size: 0.8rem; /* Esto equivale a text-sm (aprox 14px) */
+    font-size: 0.8rem; 
    
 }
 </style>
