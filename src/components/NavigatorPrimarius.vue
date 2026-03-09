@@ -51,12 +51,12 @@ onUnmounted(() => {
 <template>
 <div>
     <Toggle 
-          class="fixed top-4 right-4  block sm:hidden"
+          class="fixed top-4 right-4 rounded p-1 block sm:hidden bg-[#ffffffb9]"
           @click="videreMenu= !videreMenu"
           >
             <Menu />
           </Toggle>
-     <nav v-if="videreMenu" class="flex flex-col sm:flex-row justify-between px-2 sm:block "> 
+     <nav v-if="videreMenu" class="menu flex flex-col sm:flex-row justify-end rounded p-1 "> 
             <NavigationMenu>
                 <NavigationMenuList class="flex flex-col sm:flex-row">
                     <NavigationMenuItem v-for="item in items" :key="item.label">
@@ -65,12 +65,10 @@ onUnmounted(() => {
                         @click.prevent = "item.onClick ? item.onClick() : null"
                         >
                             <NavigationMenuLink 
-                                :class="[
-                                    navigationMenuTriggerStyle(), 
-                                    'text-md hover:bg-[#21127e] hover:text-white ' 
+                                :class="[, 
+                                    'text-md ¡bg-transparent! hover:font-bold hover:text-[#1414cf] transition-all' 
                                     
-                                    ]"
-                                    style="font-light"
+                                    ]" 
                                     
                                     >
                                 {{ item.label }}
@@ -87,7 +85,7 @@ onUnmounted(() => {
 <style scoped>
 
 .icon-menu{
-    color: rgb(20, 20, 207);
+    color: #1414cf;
     width: 2rem;
     height: 2rem;
 }
@@ -98,8 +96,22 @@ onUnmounted(() => {
     border-radius: 0;
     opacity: 1;
     left: 0;
-   
     }
 }
-
+@media (min-width: 640px) {
+        .menu {
+    width: 100%;
+    border-radius: 0;
+    opacity: 1;
+    left: 0;
+    }
+}
+@media (max-width: 640px) {
+        .menu {
+            background: #ffffffb9;
+            position: fixed;
+            top: 53px;
+            right: 16px;
+        }
+}
 </style>

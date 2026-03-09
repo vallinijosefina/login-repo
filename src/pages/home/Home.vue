@@ -4,6 +4,14 @@ import { scrollToSection } from '@/utils/ScrolltoSection'
 
 import Button from '@/components/ui/button/Button.vue';
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+
 import { ref } from 'vue';
 import { Card,CardContent } from '@/components/ui/card';
 import { trabajos, type Trabajos } from '@/pages/TrabajosHechos/data';
@@ -13,19 +21,9 @@ const listaTrabajos = ref< Trabajos[]>( trabajos )
 
 const menuItems = [
     {
-        label: 'INICIO',
-        href: '#',
-        onClick: () => scrollToSection('#')
-    },
-    {
         label: 'SOBRE MI',
         href: '#Sobre-mi',
         onClick: () => scrollToSection('#Sobre-mi')
-    },
-    {
-        label: 'PROFESIONAL',
-        href: '#Información-profesional',
-        onClick: () => scrollToSection('#Información-profesional')
     },
     {
         label: 'TRABAJOS',
@@ -44,9 +42,6 @@ const menuItems = [
 
 <template>
     <header class="mi-nombre flex items-center justify-between ">
-        <!-- <h1 class="text-black text-xl ">
-            Josefina Vallini
-        </h1> -->
         <img 
             class="w-35 px-6 m-2 hover:scale-250 ease-in-out"
             src="/imagines/minombre.png">
@@ -134,16 +129,76 @@ const menuItems = [
         
     </section>
 
-    <section id="Contacto">
-         <div>
-            <h1>CONTACTO</h1>
-            <p class="parrafo">@joseevallini
-                618803643
-                vallini.josefina@gmail.com
-                be.net/JosefinaVallini
-            </p>
-        <!-- Formulario, logos instagram y eso  -->
+    <section id="Contacto" class="mt-20 m-9 pt-3 border-t-4 border-[#20127ea2]">
+        <h1 class="mb-6">CONTÁCTAME</h1>
+        <div class="flex flex-col-2 sm:cols-1 gap-4 items-center ">
+            <div class="justify-center text-center space-y-5">
+                <p class="especial">¿Tienes un proyecto en mente?</p>
+                <p>¡Hablemos!</p>
+            </div>
+            <form 
+                    class="border rounded md:w-3/4 lg:w-3/4 lg:h-[600px] p-6 aspect-square flex flex-col gap-5 ml-10"
+                    :style="{
+                        backgroundImage: ` url('/imagines/Caards.png')`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center'
+                    }"
+            >
+
+                <div class="space-y-2 flex flex-col">
+                    <label class="nomen">Nombre</label>
+                     <Input required class="bg-[rgba(255,255,255,0.57)]  border rounded-lg px-3"/>
+                </div>      
+                <div class="space-y-2 flex flex-col">
+                    <label class="nomen">Apellidos</label>
+                     <Input required class="bg-[rgba(255,255,255,0.57)]  border rounded-lg px-3"/>
+                </div>
+                <div class="space-y-2 flex flex-col">
+                    <label class="nomen">Tu idea de proyecto</label>
+                    <textarea 
+                        required 
+                        rows="4" 
+                        class="bg-[rgba(255,255,255,0.57)] border rounded-lg px-3 py-2 resize-none outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    ></textarea>                
+                </div>
+                <div>
+                    <Select>
+                        <SelectTrigger class="bg-[rgba(255,255,255,0.17)] cursor-pointer">
+                            <SelectValue class="nomen " placeholder="Servicio que buscas" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="Fotografía">
+                                Fotografía
+                            </SelectItem>
+                            <SelectItem value="Diseño de identidad">
+                                Diseño de identidad visual
+                            </SelectItem>
+                            <SelectItem value="Diseño Gráfico">
+                                Diseño gráfico
+                            </SelectItem>
+                            <SelectItem value="Diseño Editorial">
+                                Diseño editorial
+                            </SelectItem>
+                        </SelectContent>
+                    </Select>
+                </div>
+                <div class="space-y-2 flex flex-col">
+                    <label class="nomen">Mail</label>
+                     <Input required class="bg-[rgba(255,255,255,0.57)]  border rounded-lg px-3"/>
+                </div>
+
+                <Button 
+                    type="submit"
+                    class="enviar w-full text-md text-bg-[#21127e] bg-[rgba(255,216,87,0.94)]  hover:bg-[#21127e] hover:text-white mt-4"
+                    >
+                    ENVIAR
+                </Button>
+
+            </form>
+
         </div>
+        
+
     </section>
 
 </template>
@@ -169,5 +224,16 @@ const menuItems = [
     #Sobre-mi img {
         width: 150px;
     }
+}
+.nomen {
+  font-family: 'GeneralSans-Light', sans-serif;
+  color: #ffffff; 
+  font-size: 18px;
+}  
+.enviar {
+  font-family: 'GeneralSans-Variable', sans-serif;
+}
+.especial {
+    font-size: xx-large;
 }
 </style>

@@ -48,19 +48,23 @@ const Curious = ref<string>('ill.png')
             />
             </transition>
         </div>
-        
-        <div class=" grid grid-cols-2 gap-2 justify-center justify-items-center mx-auto w-fit ">
-           <HoverCard>
-                <HoverCardTrigger>
-                    <img class="w-60 h-auto" src="/imagines/Hobbies/Amo.png" alt="">
+        <img 
+            src="/imagines/Hobbies/Rulo.png" 
+            alt=""
+            class="w-[80px] mx-4 flex justify-end items-center"
+            >
+        <div class=" grid grid-col md:grid-cols-2 space-x-15 space-y-20 justify-center justify-items-center mx-auto w-fit ">
+           <HoverCard >
+                <HoverCardTrigger class="w-[250px] h-auto">
+                    <img class="w-60 h-auto" src="/imagines/Hobbies/AAmo.png" alt="">
                 </HoverCardTrigger>
-                <HoverCardContent>
+                <HoverCardContent >
                 <img src="/imagines/Hobbies/Family.jpg" alt="">
                 <p  class="descrip">A mi familia y amigos</p>
                 </HoverCardContent>
             </HoverCard>
              <HoverCard>
-                <HoverCardTrigger>
+                <HoverCardTrigger class="w-[180px] h-auto mb-4">
                     <img class="w-60 h-auto" src="/imagines/Hobbies/Arg.png" alt="">
                 </HoverCardTrigger>
                 <HoverCardContent>
@@ -79,28 +83,39 @@ const Curious = ref<string>('ill.png')
             </HoverCard>
              <HoverCard>
                 <HoverCardTrigger>
-                    <img class="w-60 h-auto" src="/imagines/Hobbies/Comida.png" alt="">
+                    <img class="w-60 h-auto cursor-pointer" src="/imagines/Hobbies/Comida.png" alt="">
                 </HoverCardTrigger>
-                <HoverCardContent>
-                <img src="/imagines/Hobbies/Papa.avif" alt="">
-                <p class="descrip">Pastel de papa de mi abuela</p>
-                <img src="/imagines/Hobbies/Alfa.jpeg" alt="">
-                <p class="descrip">Y los alfajores</p>
+                <HoverCardContent side="left" class="w-48 mr-2">
+                    <img src="/imagines/Hobbies/Papa.avif" alt="">
+                    <p class="descrip">Pastel de papa de mi abuela</p>
+                </HoverCardContent>
+                <HoverCardContent side="right" class="w-48 ml-2">
+                    <img src="/imagines/Hobbies/Alfa.jpeg" alt="">
+                    <p class="descrip">Y los alfajores</p>
                 </HoverCardContent>
             </HoverCard>
-             <HoverCard>
-                <HoverCardTrigger>
-                    <img class="w-60 h-auto cursor-help" src="/imagines/Hobbies/Musica.png" alt="">
+            <HoverCard>
+                <HoverCardTrigger class="w-[170px] h-auto">
+                    <img class="cursor-pointer" src="/imagines/Hobbies/Musica.png" alt="">
                 </HoverCardTrigger>
-                <div>
                     <HoverCardContent side="left" class="w-48 mr-2">
                         <img src="/imagines/Hobbies/Musica/Grasa.jpg" alt="">
                     </HoverCardContent>
-                    <HoverCardContent side="right" class="w-48 ml-2">
-                        <img src="/imagines/Hobbies/Musica/Grasa.jpg" alt="">
+                     <HoverCardContent side="top" class="w-48 mr-2">
+                        <img src="/imagines/Hobbies/Musica/Milo.jpg" alt="">
                     </HoverCardContent>
-                </div>
-               
+                    <HoverCardContent side="right" class="w-48 ml-2">
+                        <img src="/imagines/Hobbies/Musica/Ari.png" alt="">
+                    </HoverCardContent>
+            </HoverCard>
+
+            <HoverCard>
+                <HoverCardTrigger class="w-[250px] h-auto">
+                    <img class="cursor-pointer" src="/imagines/Hobbies/Dream.png" alt="">
+                </HoverCardTrigger>
+                    <HoverCardContent>
+                        <img src="/imagines/Hobbies/dreams.PNG" alt="">
+                    </HoverCardContent>
             </HoverCard>
         </div>
     </div>
