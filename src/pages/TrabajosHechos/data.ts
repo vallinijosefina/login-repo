@@ -18,11 +18,11 @@ export const trabajos: Trabajos[] = [
     {
     id: 0,
     titulus: 'Diseño tipográfico',
-    imago: 'Tipografia/O.jpg',
-    imago2:'Tipografia/Z.jpg',
+    imago: 'Tipografia/MU_X.png',
+    imago2:'Tipografia/Z.jpg ',
     imago3:'Tipografia/X.jpg',
-    imago5: '',
-    imago4: '',
+    imago5: 'Tipografia/MUtresLetras.png',
+    imago4: 'Tipografia/O.jpg',
     descripcione:'Proyecto de creación de tipografías para el desafío de 36 days of Type. El objetivo de este proyecto fue jugar con la expresividad de la tipografía mediante la forma, el color, el acabado y la composición. Inspiradas en las siluetas, colores y texturas gráficas de unas típicas cartas de la baraja española.',
     date:'Año 2025' ,
     cliente: 'Cliente: Proyecto Universitario',
@@ -31,9 +31,9 @@ export const trabajos: Trabajos[] = [
     {
     id: 1,
     titulus: 'Cartel Gula',
-    imago: 'CartelTeatro/GulaCartel.jpg',
-    imago2:'', //mockup ???
-    imago3:'', //mockup??
+    imago: 'CartelTeatro/MockupGula3.png ',
+    imago2:'CartelTeatro/GulaCartel.jpg', //mockup ???
+    imago3:'CartelTeatro/MockupGula2.png', //mockup??
     imago5: '',
     imago4: '',
     descripcione:'Diseño de cartelería para la obra de Teatro "Siete", escrita y dirigida por Alejandra Winker, en la cual se habla de manera satírica sobre los siete pecados capitales institucionalizados por la Iglesia Católica. En particular, el cartel se centra en el pecado de la Gula.',
@@ -44,11 +44,11 @@ export const trabajos: Trabajos[] = [
     {
     id: 2,
     titulus: 'Congreso Iberoamericano',
-    imago: 'CartelCongreso/CongresoCartel.jpg',
-    imago2:'', //mockup ???
-    imago3:'', //mockup??
-    imago5: '',
-    imago4: '',
+    imago:'CartelCongreso/MUCongreso.jpeg', //mockup ???
+    imago2: 'CartelCongreso/CongresoCartel.jpg',
+    imago3:'CartelCongreso/MUCongrseo2.jpeg', //mockup??
+    imago5: 'CartelCongreso/LogoCongreso.jpeg',
+    imago4: 'CartelCongreso/LogocongresoNeg.jpeg',
     descripcione:'Diseño de cartel para el 1er Congreso Iberoamericano de Creación y Fabricación Digital',
     cliente: 'Cliente: Proyecto Universitario',
     date: 'Año 2025',
@@ -70,11 +70,11 @@ export const trabajos: Trabajos[] = [
     {
     id: 4,
     titulus: 'Juego de mesa MOOD',
-    imago: 'Mood/moodCartel.jpg', 
-    imago2:'Mood/mood.jpg', 
-    imago3:'Mood/mood3.jpg', 
+    imago: 'Mood/MOOD1.png', 
+    imago2:' Mood/CartelMood.jpg', 
+    imago3:'Mood/MOOD6.png', 
+    imago4: ' Mood/MOOD3.png',
     imago5: '',
-    imago4: 'Mood/moood2.jpg',
     descripcione:'"Mood" un juego de mesa el cual su objetivo es tratar la temática de la salud mental a partir del humor y del carisma, de tal forma que los jugadores puedan expresar sus sentimientos, escucharse entre si y apoyarse. Con el equipo creamos la metodología del juego, sus reglas, sus consignas y los objetivos, al igual que nos encargamos del diseño de todas sus partes como lo son, el tablero, las cartas, las fichas de juego, el Manual de uso, las instrucciones y la cartelería promocional', // rellenar
     date:'Año 2025' ,
     cliente: 'Cliente: Proyecto Universitario',
