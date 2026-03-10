@@ -62,9 +62,16 @@ const menuItems = [
             class="w-120 rounded object-cover object-center mt-2 mb-4  "
             src="/imagines/Trabajos/Fotografia/StandStillWarmer.png"
         >
-        <div class="descripcion">
+        <div class="descripcion space-y-4">
             <h1>SOBRE MI</h1>
-            <p class="parrafo">Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia.Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe en Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia</p>
+            <p class="parrafo">Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe, Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia. Me interesa el diseño gráfico, diseño de identidad visual, packaging y fotografía. He trabajado en varios proyectos creativos de los cuales aprendí habilidades como la comunicación, trabajo en equipo y a confiar en el proceso
+            </p>
+            <p class="parrafo">
+                Mi mayor sueño es trabajar en un entorno amable, creativo y multidiciplinario, en el que se lleven a cabo proyectos que inspiren a otras personas a ser más auténticas, más generosas y más empáticas.
+            </p>
+            <p>
+                Soy una persona sensible y muy apasionada por todos los tipos de artes. Ver a otras personas haciendo arte me infla el alma y me llena de inspiración y admiración. 
+            </p>
        </div>
 
        <Button variant="link"
@@ -216,6 +223,7 @@ const menuItems = [
 }
 .descripcion{
     margin: 40px;
+
 }
 @media (max-width: 600px) {
     #Sobre-mi {
