@@ -105,28 +105,30 @@ const menuItems = [
             <div class="grid grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 ">
                 <Card 
                     v-for="mitrabajo in listaTrabajos"
-                    class=" cursor-pointer object-contain h-full w-auto bg-[#191050] rounded"
+                    class="group relative overflow-hidden cursor-pointer object-contain h-full w-auto h-[450px] bg-[#191050] rounded"
                     :style="{
-                        backgroundImage: ` url('/imagines/Caards.png')`,
+                        backgroundImage: ` url('/imagines/Trabajos/${ mitrabajo.imago }')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }"
                 >
                     <CardContent 
-                        class="object-contain h-full w-full flex flex-col items-center justify-around "
-                        @click="$router.push(`/trabajo/${ mitrabajo.id }`)"
-                        >
-                        <h2 class="text-white mt-4">{{ mitrabajo.titulus }}</h2>
-                        <img 
-                            class=" rounded w-[400px] h-[450px] object-cover object-center mt-2 mb-4  "
-                            :src="`/imagines/Trabajos/${ mitrabajo.imago }`" alt=""
-                        >
+                    class="absolute inset-0 h-full w-full flex flex-col items-center justify-center 
+                opacity-0 group-hover:opacity-70 transition-opacity duration-500 ease-in-out px-4"
+      :style="{
+          backgroundImage: `linear-gradient(rgba(25, 16, 80, 0.3), rgba(25, 16, 80, 0.2)), url('/imagines/Caards.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+      }"
+      @click="$router.push(`/trabajo/${ mitrabajo.id }`)"
+    >
+      <h2 class="text-white text-2xl text-center font-GeneralSans-Light uppercase tracking-widest">
+        {{ mitrabajo.titulus }}
+      </h2>
                     </CardContent>
                 </Card>
-
             </div>
         </div>
-        
     </section>
 
     <section id="Contacto" class="mt-20 m-9 pt-3 border-t-4 border-[#20127ea2]">
