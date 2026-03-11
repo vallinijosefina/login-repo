@@ -66,7 +66,7 @@ onUnmounted(() => {
                         >
                             <NavigationMenuLink 
                                 :class="[, 
-                                    'text-md ¡bg-transparent! hover:font-bold hover:text-[#1414cf] transition-all' 
+                                    'text-md bg-transparent hover:bg-transparent hover:font-bold hover:text-[#1414cf] transition-all' 
                                     
                                     ]" 
                                     

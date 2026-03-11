@@ -18,7 +18,7 @@ export const trabajos: Trabajos[] = [
     {
     id: 0,
     titulus: 'Diseño tipográfico',
-    imago: 'Tipografia/MU_X.png',
+    imago: 'Tipografia/MU_Xpeque.png',
     imago2:'Tipografia/Z.jpg ',
     imago3:'Tipografia/X.jpg',
     imago5: 'Tipografia/MUtresLetras.png',
@@ -32,8 +32,8 @@ export const trabajos: Trabajos[] = [
     id: 1,
     titulus: 'Cartel Gula',
     imago: 'CartelTeatro/MockupGula3.png ',
-    imago2:'CartelTeatro/GulaCartel.jpg', //mockup ???
-    imago3:'CartelTeatro/MockupGula2.png', //mockup??
+    imago2:'CartelTeatro/MockupGula2.png ', //mockup ???
+    imago3:'CartelTeatro/GulaCartel.jpg', //mockup??
     imago5: '',
     imago4: '',
     descripcione:'Diseño de cartelería para la obra de Teatro "Siete", escrita y dirigida por Alejandra Winker, en la cual se habla de manera satírica sobre los siete pecados capitales institucionalizados por la Iglesia Católica. En particular, el cartel se centra en el pecado de la Gula.',
@@ -44,11 +44,11 @@ export const trabajos: Trabajos[] = [
     {
     id: 2,
     titulus: 'Congreso Iberoamericano',
-    imago:'CartelCongreso/MUCongreso.jpeg', //mockup ???
-    imago2: 'CartelCongreso/CongresoCartel.jpg',
-    imago3:'CartelCongreso/MUCongrseo2.jpeg', //mockup??
+    imago:'CartelCongreso/MUCongreso.png', //mockup ???
+    imago2: 'CartelCongreso/Congreso.png',
+    imago4:'CartelCongreso/MUCongrseo2.jpeg', //mockup??
     imago5: 'CartelCongreso/LogoCongreso.jpeg',
-    imago4: 'CartelCongreso/LogocongresoNeg.jpeg',
+    imago3: 'CartelCongreso/LogocongresoNeg.jpeg',
     descripcione:'Diseño de cartel para el 1er Congreso Iberoamericano de Creación y Fabricación Digital',
     cliente: 'Cliente: Proyecto Universitario',
     date: 'Año 2025',
@@ -71,9 +71,9 @@ export const trabajos: Trabajos[] = [
     id: 4,
     titulus: 'Juego de mesa MOOD',
     imago: 'Mood/MOOD1.png', 
-    imago2:' Mood/CartelMood.jpg', 
+    imago2:'Mood/CartelMood.jpg', 
     imago3:'Mood/MOOD6.png', 
-    imago4: ' Mood/MOOD3.png',
+    imago4: 'Mood/MOOD3.png',
     imago5: '',
     descripcione:'"Mood" un juego de mesa el cual su objetivo es tratar la temática de la salud mental a partir del humor y del carisma, de tal forma que los jugadores puedan expresar sus sentimientos, escucharse entre si y apoyarse. Con el equipo creamos la metodología del juego, sus reglas, sus consignas y los objetivos, al igual que nos encargamos del diseño de todas sus partes como lo son, el tablero, las cartas, las fichas de juego, el Manual de uso, las instrucciones y la cartelería promocional', // rellenar
     date:'Año 2025' ,
@@ -83,11 +83,11 @@ export const trabajos: Trabajos[] = [
     {
     id: 5,
     titulus: 'Fotografías homenaje a Ouka Leele',
-    imago: 'Fotografia/Foto1.JPG',
-    imago2:'Fotografia/Foto2.JPG',
-    imago3:'Fotografia/Foto8.JPG', //
-    imago5: 'Fotografia/Foto6.JPG',
-    imago4: 'Fotografia/Foto5.JPG',
+    imago: 'Fotografia/FOTO2.png',
+    imago2:'Fotografia/FOTO3.png ',
+    imago3:'Fotografia/FOTO1.png', //
+    imago4: 'Fotografia/FOTO5.png',
+    imago5: 'Fotografia/FOTO4.png',
     descripcione:'Sesión fotográfica inspirada en las obras de la emblemática artista Ouka Leele.',
     date:'Año 2025' ,
     cliente: 'Cliente: Proyecto Universitario',
@@ -98,7 +98,7 @@ export const trabajos: Trabajos[] = [
     titulus: '"Stand Still"',
     imago: 'Fotografia/granylook.png', 
     imago2:'Fotografia/Groove.png', // poner img
-    imago3:'Fotografia/SeriousGrain2.png', // poner img
+    imago3:'Fotografia/SeriousGrain.png', // poner img
     imago4: 'Fotografia/StandStillWarmer.png',
     imago5: '',
     descripcione:'"Stand Still" es una sesión fotográfica en la que se realza el movimiento y la falta de enfoque, reflejando también como es la vida misma que simpre está en constante movimiento y es ahi donde se encuentra la mágia y la espontaneidad. Pero que a su vez, es necesario detenerse a enfocar la atención a ciertas cosas como lo es una mirada', // rellenar

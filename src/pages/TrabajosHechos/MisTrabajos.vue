@@ -14,9 +14,12 @@ const mitrabajo =ref<Trabajos | undefined>(
 <template>
     <div v-if="mitrabajo" class="flex flex-col w-full max-w-[1400px] m-10 mx-auto my-8 px-5 md:px-20">
         <div>
-            <h1 class="titulus"> 
+            <h2 class="titulus font-bold"> 
                 {{mitrabajo.titulus}}
-            </h1>
+            </h2>
+            <p class="descriptione">
+                    {{ mitrabajo.descripcione }}
+            </p>
         <div class=" grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <img 
                 class="flex shadow"
@@ -41,12 +44,10 @@ const mitrabajo =ref<Trabajos | undefined>(
         </div>
         
             <div class="toda-la-info">
-                <p class="descriptione">
-                    {{ mitrabajo.descripcione }}
-                </p>
+                
                         
                 <div class="info-secundaria">
-                    <p class=""> 
+                    <p class="mt-6"> 
                        {{ mitrabajo.date }}
                     </p>
                     <p class="">
@@ -66,11 +67,15 @@ const mitrabajo =ref<Trabajos | undefined>(
 
 <style scoped>
 .titulus{
-  font-weight: 700;
-  font-size: 2rem;
   line-height: 2.25rem;
   margin-bottom: 1.25rem;
+  font-weight: 300;
+   font-family: 'GeneralSans-Regular', sans-serif;
+  color: #191050; 
+  font-size: 40px;
+  padding-bottom: 15px;
 }
+
 
 @media (min-width: 1024px) {
   .titulus{

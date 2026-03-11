@@ -17,7 +17,8 @@ import { Card,CardContent } from '@/components/ui/card';
 import { trabajos, type Trabajos } from '@/pages/TrabajosHechos/data';
 const listaTrabajos = ref< Trabajos[]>( trabajos )
 
-// import CarrusImagium from '@/components/CarrusImagium.vue';
+import { useMouseFollower } from '@/composables/useMouseFollower'
+
 
 const menuItems = [
     {
@@ -57,11 +58,11 @@ const menuItems = [
 
     <section id= "Sobre-mi" 
             class="flex flex-col md:flex-row items-center justify-between gap-2 m-10">
-       
-        <img 
-            class="w-120 rounded object-cover object-center mt-2 mb-4  "
+    
+         <img 
+            class="w-120 rounded object-center mt-2 mb-4  "
             src="/imagines/Trabajos/Fotografia/StandStillWarmer.png"
-        >
+        > 
         <div class="descripcion space-y-4">
             <h1>SOBRE MI</h1>
             <p class="parrafo">Soy Josefina Vallini, tengo 20 años. Nací en la ciudad de Santa Fe, Argentina. Vine a España en el año 2024 para iniciar mis estudios en el Grado de Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia. Me interesa el diseño gráfico, diseño de identidad visual, packaging y fotografía. He trabajado en varios proyectos creativos de los cuales aprendí habilidades como la comunicación, trabajo en equipo y a confiar en el proceso
@@ -70,7 +71,7 @@ const menuItems = [
                 Mi mayor sueño es trabajar en un entorno amable, creativo y multidiciplinario, en el que se lleven a cabo proyectos que inspiren a otras personas a ser más auténticas, más generosas y más empáticas.
             </p>
             <p>
-                Soy una persona sensible y muy apasionada por todos los tipos de artes. Ver a otras personas haciendo arte me infla el alma y me llena de inspiración y admiración. 
+                Soy una persona sensible y muy apasionada por todos los tipos de artes. Ver a otras personas haciendo arte me llena de inspiración y admiración. 
             </p>
        </div>
 
@@ -93,17 +94,24 @@ const menuItems = [
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed' 
             }">
-         <div>
-            <h1>INFORMACIÓN PROFESIONAL</h1>
-            <p class="parrafo">Actualmente estoy en segundo año de la carrera Diseño y Tecnologías Creativas</p>
-            <p class="parrafo">Poseo conocimientos en varios programas de Adobe, tales son Photoshop, Ilustrator, Indesign, Premiere</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 space-y-6 space-x-6">
+            <div>
+             <h1>EDUCACIÓN</h1>
+              <p class="parrafo">Actualmente estoy en segundo año de la carrera Diseño y Tecnologías Creativas, en la Universidad Politécnica de Valencia</p>
+            </div>
+            <div>
+                <h1>HABILIDADES</h1>
+                <p class="parrafo">Poseo conocimientos en varios programas de Adobe, tales son Photoshop, Ilustrator, Indesign, Premiere</p>
+            </div>
+
+        </div>
             <div class="flex flex-row  w-[55px] h-[55px] mt-20 space-x-4" >
                 <img src="/imagines/Presentacion/ill.png" alt="">
                 <img src="/imagines/Presentacion/pho.png" alt=""> 
                 <img src="/imagines/Presentacion/ind.png" alt="">
                 <img src="/imagines/Presentacion/pre.png" alt="">
             </div>
-        </div>
+        
     </section>
 
     <section id="Trabajos">
@@ -206,10 +214,22 @@ const menuItems = [
             </form>
 
         </div>
-        
-
     </section>
+   <footer class=" bottom-0 left-0 w-full z-40 bg-[#a5a5a52c] backdrop-blur-md border-t border-[#191050]/10 py-2 px-6">
+    <div class="flex justify-between items-center max-w-7xl mx-auto text-[#191050]">
+      
+      <p class=" footer text-xs font-light">
+        Visita mis redes sociales!
+      </p>
 
+      <div class="flex gap-4 text-xs">
+        <a href="https://www.instagram.com/joseevallini?igsh=MTlmaW1reXU0c3pjNA%3D%3D" class="footer hover:font-bold transition-all">INSTAGRAM</a>
+        <a href="https://www.linkedin.com/in/josefina-vallini-9a5636244/" class="footer hover:font-bold transition-all">LINKEDIN</a>
+        <a href="mailto:vallini.josefina@gmail.com" class="footer hover:font-bold transition-all">MAIL</a>
+      </div>
+      
+    </div>
+  </footer>
 </template>
 
 
@@ -218,7 +238,7 @@ const menuItems = [
 <style scoped>
 
 #Sobre-mi img {
-    width: 200px;          /* tamaño de la imagen */
+    width: 200px;
     height: auto;
 }
 .descripcion{
@@ -245,5 +265,10 @@ const menuItems = [
 }
 .especial {
     font-size: xx-large;
+}
+.footer {
+    font-family: 'GeneralSans-Variable', sans-serif;
+    color: #191050; 
+    font-size: 0.8rem; 
 }
 </style>

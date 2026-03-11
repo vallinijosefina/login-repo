@@ -68,7 +68,7 @@ const Curious = ref<string>('ill.png')
                     <img class="w-60 h-auto" src="/imagines/Hobbies/Arg.png" alt="">
                 </HoverCardTrigger>
                 <HoverCardContent>
-                <img src="/imagines/Hobbies/Mates.png" alt="">
+                <img src="/imagines/Hobbies/SantaFe.JPG" alt="">
                 
                 </HoverCardContent>
             </HoverCard>
